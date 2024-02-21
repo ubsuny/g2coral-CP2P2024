@@ -21,7 +21,7 @@
                 "--pageTotal",
                 "70"
             ],
-            "console": "integratedTerminal",
+            "console": "integratedTerminal"
         }
     ]
 }
