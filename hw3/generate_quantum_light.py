@@ -1,4 +1,5 @@
 import numpy as np
+from numpy.random import default_rng
 import pandas as pd
 
 def create_dataframe(num_photon_detections = 100, num_detectors = 4):
@@ -12,12 +13,14 @@ def create_dataframe(num_photon_detections = 100, num_detectors = 4):
     df = pd.DataFrame(data)
     return df
 
-# Ask the user for the number of rows and detectors
-num_rows = int(input("Enter the number of photons detected: "))
-num_photon_detections = int(input("Enter the number of detectors: "))
+def generate_data(data_frame):
 
-# Create the DataFrame
-df = create_dataframe(num_rows, num_detectors)
+  rng = default_rng()
+  keys = data_frame.columns.tolist()
+  
 
-# Display the DataFrame
-print(df)
+  for i in range(len(data_frame)):
+    coloumn_index = rng.choice(a=keys, size=None, replace=True, p=None)
+    data_frame.at[i, coloumn_index ] = True
+
+  return data_frame
