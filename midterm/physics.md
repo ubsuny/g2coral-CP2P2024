@@ -21,8 +21,9 @@ A CCR will inherently produce vibration. There are a few things that can be done
 
 The proposed solution is to place an LED on one side of the sample holder, and the sample on the opposite side. A high-speed camera can then be used to capture an image of the LED as it is moving inside the cryostat. The images can then be processed to obtain the position of the LED, and the time at which the LED was at that position. On the other side, the sample is excited by a function generator, and the photoluminescence (PL) spectra are recorded by a spectrometer. One can then reconstruct a PL image of the sample by matching the recorded PL spectra with the position of the LED. A disadvantage of this imaging method is that some pixels will not be imaged, so one will not have the full image of the sample.
 
-The tracking code is available in... [2]
+The tracking code is available in `midterm/motion_track.py`, and an example data set is available in `midterm/data_vib.csv`. Both were provided by reference [2].
 
 # References
 [1] “Janis Closed Cycle Refrigerator System Manual,” Applied Cryogenics, [Online]. Available:[ http://appliedcryogenics.com/CRYO%20DOC/Janis%20Closed%20Cycle%20Refrigerator%20System%20Manual.pdf](http://appliedcryogenics.com/CRYO%20DOC/Janis%20Closed%20Cycle%20Refrigerator%20System%20Manual.pdf). [Accessed: March 29, 2024].
+
 [2] C. Mudiyans, GitLab, 2024.
