@@ -5,6 +5,8 @@ The cooling cycle of a Closed Cycle Refrigerator (CCR) is analogous to that of a
 ## The Principles of Operation
 The compressor used is air/water cooled and oil lubricated, with an oil separation system. The compressor is separated from the refrigeration unit which helps in reducing vibrations.
 
+![1 Cycle](stage1.png)
+
 Figure 1 shows the schematic diagram of the refrigeration unit. A source of compressed gas is connected to intake valve A. Valve B is the exhaust valve leading to the low-pressure side of the compressor. If valve B is closed, and valve A is opened, then the piston will move up and the cylinder will fill up with compressed gas. Now we close valve A and open valve B, causing the compressed gas in the cylinder to expand into the discharge line and cool down, which will lead to heat transfer from the load to the gas. Thereby the load will cool down, and the gas will be heated. The piston is then lowered, which discharges the remaining gas to the discharge line, completing the cycle.
 
 A regenerator is a type of heat exchanger that allows helium to flow back and forth through it. It is filled with a material that has a large surface area, high specific heat capacity, and low thermal conductivity. This material efficiently absorbs heat from the helium that is coming in from valve A, stores the heat, and then transfers that heat to the helium exiting through the discharge line. Without the regenerator, one would not be able to achieve the desired low temperatures.
