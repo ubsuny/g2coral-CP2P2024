@@ -12,3 +12,4 @@ Figure 1 shows the schematic diagram of the refrigeration unit. A source of comp
 A regenerator is a type of heat exchanger that allows helium to flow back and forth through it. It is filled with a material that has a large surface area, high specific heat capacity, and low thermal conductivity. This material efficiently absorbs heat from the helium that is coming in from valve A, stores the heat, and then transfers that heat to the helium exiting through the discharge line. Without the regenerator, one would not be able to achieve the desired low temperatures.
 
 The system shown in Figure 1 can only reach temperatures in the 33-70K range. To reach the required temperature of 6-10K, we can add a second stage, as shown in Figure 2.
+![2 Cycles](https://github.com/ubsuny/g2coral-CP2P2024/blob/main/midterm/stage2.PNG)
