@@ -1,0 +1,12 @@
+# Closed Cycle Helium Refrigerator
+
+The cooling cycle of a Closed Cycle Refrigerator (CCR) is analogous to that of a household refrigerator, with a few key additions. In a household refrigerator, a working fluid is compressed, the heat of compression is removed by an air/water-cooled heat exchanger, and the fluid is then expanded to achieve cooling below ambient temperature. However, such a system can only produce cooling that is a few degrees below zero degrees centigrade. But we are interested in cooling and maintaining our load at about 10K. Therefore, we need very efficient heat exchange and helium as a working fluid, because helium remains fluid at temperatures approaching absolute zero.
+
+## The Principles of Operation
+The compressor used is air/water cooled and oil lubricated, with an oil separation system. The compressor is separated from the refrigeration unit which helps in reducing vibrations.
+
+Figure 1 shows the schematic diagram of the refrigeration unit. A source of compressed gas is connected to intake valve A. Valve B is the exhaust valve leading to the low-pressure side of the compressor. If valve B is closed, and valve A is opened, then the piston will move up and the cylinder will fill up with compressed gas. Now we close valve A and open valve B, causing the compressed gas in the cylinder to expand into the discharge line and cool down, which will lead to heat transfer from the load to the gas. Thereby the load will cool down, and the gas will be heated. The piston is then lowered, which discharges the remaining gas to the discharge line, completing the cycle.
+
+A regenerator is a type of heat exchanger that allows helium to flow back and forth through it. It is filled with a material that has a large surface area, high specific heat capacity, and low thermal conductivity. This material efficiently absorbs heat from the helium that is coming in from valve A, stores the heat, and then transfers that heat to the helium exiting through the discharge line. Without the regenerator, one would not be able to achieve the desired low temperatures.
+
+The system shown in Figure 1 can only reach temperatures in the 33-70K range. To reach the required temperature of 6-10K, we can add a second stage, as shown in Figure 2.
