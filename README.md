@@ -18,6 +18,8 @@ The system shown in Figure 1 can only reach temperatures in the 33-70K range. To
 
 # Imaging an Object in a Cryostat.
 
+The current experiment we are running requires that we cool down the sample to about 10K. That is because the sample would burn if we ran a current through it at a high temperature. Furthermore, the low temperature allows for a reliable spin injection to the active region. Finally, we need to test the effect of temperature on the electroluminescence circularly polarized light that is emitted by the sample. 
+
 A CCR will inherently produce vibration. There are a few things that can be done to reduce vibrations. However, vibrations will always be there. Therefore, imaging the inside of the cryostat can be challenging. This project is aimed at finding a solution to imaging an object inside the cryostat.
 
 The proposed solution is to place an LED on one side of the sample holder, and the sample on the opposite side. A high-speed camera can then be used to capture an image of the LED as it is moving inside the cryostat. The images can then be processed to obtain the position of the LED, and the time at which the LED was at that position. On the other side, the sample is excited by a function generator, and the photoluminescence (PL) spectra are recorded by a spectrometer. One can then reconstruct a PL image of the sample by matching the recorded PL spectra with the position of the LED. A disadvantage of this imaging method is that some pixels will not be imaged, so one will not have the full image of the sample.
