@@ -26,6 +26,30 @@ The proposed solution is to place an LED on one side of the sample holder, and t
 
 The tracking code is available in `midterm/motion_track.py`, and an example data set is available in `midterm/data_vib.csv`. Both were provided by reference [2].
 
+# Tracking
+
+## Bright Tracking
+
+The first attempt at tracking the LED in the cryostat was done by [1]. It involved finding the brightest spot in the image and recording those coordinates. This method was very quick (~0.2 ms per frame). However, upon closer examination, it was found that racking the bright spot is very inaccurate. Therefore, we had to move on to different methods.
+
+## Machine Learning
+
+A CNN tracking code was attempted. It produced accurate results. However, it was quickly abandoned because of speed issues.
+
+## OpenCV Template Matching [3]
+
+OpenCV (Open Source Computer Vision Library) is an open-source computer vision and machine learning software library. It is designed to provide a common infrastructure for computer vision applications. OpenCV contains over 2500 optimized algorithms that can be used for a variety of tasks, including detecting and recognizing faces, identifying objects, classifying human actions in videos, tracking camera movements, tracking moving objects, extracting 3D models of objects, and stitching images together to produce a high-resolution image of an entire scene. Furthermore, it supports various programming languages like C++, Python, Java, and MATLAB.
+
+Template matching is a technique in computer vision used to find a specific part of an image that matches a template image. This method is commonly used for object detection. It works by selecting a smaller image, known as the template, which is the pattern you want to find in the larger image (referred to as the source or search image). The template is slid over the source image (from left to right and top to bottom), and at each position, a similarity measure is calculated between the template and the region of the source image under the template. Several methods can be used to measure how similar the template is to the region in the source image. Common methods include: TM_SQDIFF, TM_SQDIFF_NORMED, TM_CCORR = 2, TM_CCORR_NORMED, TM_CCOEFF, and TM_CCOEFF_NORMED.
+
+OpenCV Template matching is simple and effective. However, it tends to perform poorly with noisy images, and it can take a long time to process large images.
+
+All the above algorithms have been tested. All six of them provided good detection results. However, only TM_CCORR and TM_SQDIFF were the fastest. When the fast algorithms were tested on large images (480 x 640), it took ~8ms per frame. However, when the same algorithms were tested on 256 x 256 images, it only took ~0.5 ms per frame. It is also worth noting that running those algorithms from a .ipynb file takes almost three times longer than running them from a .py file.
+
+### Improving OpenCV Template Matching
+
+Thus far the fastest tracking achieved was ~0.5 ms per frame. However, the camera we use can take up to 5000 fps. Therefore, we strive to reach a tracking speed of ~0.2 ms per frame, which will allow us to calculate as much data as possible. Therefore, future tests will be conducted on 64 x 64 images. Moreover, we will experiment with running the template matching algorithms on a GPU instead of a CPU.
+
 # References
 [1] “Janis Closed Cycle Refrigerator System Manual,” Applied Cryogenics, [Online]. Available:[ http://appliedcryogenics.com/CRYO%20DOC/Janis%20Closed%20Cycle%20Refrigerator%20System%20Manual.pdf](http://appliedcryogenics.com/CRYO%20DOC/Janis%20Closed%20Cycle%20Refrigerator%20System%20Manual.pdf). [Accessed: March 29, 2024].
 
